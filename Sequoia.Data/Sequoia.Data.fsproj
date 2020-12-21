@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Entities.fs" />
+        <Compile Include="Storage.fs" />
+        <Compile Include="CommandRepository.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MongoDB.Bson" Version="2.11.5" />
+      <PackageReference Include="MongoDB.Driver" Version="2.11.5" />
+      <PackageReference Include="MongoDB.Driver.Core" Version="2.11.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sequoia.Common\Sequoia.Common.fsproj" />
+      <ProjectReference Include="..\Sequoia\Sequoia.fsproj" />
+    </ItemGroup>
+
+</Project>
