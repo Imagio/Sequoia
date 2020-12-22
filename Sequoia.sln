@@ -8,6 +8,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequoia.Common", "Sequoia.C
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequoia.Infrastructure", "Sequoia.Infrastructure\Sequoia.Infrastructure.fsproj", "{5769195F-D517-4832-96CB-3512A41EEC3F}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequoia.Serilog", "Sequoia.Serilog\Sequoia.Serilog.fsproj", "{1F76EA1E-2BA9-4EDB-BE8A-EC0AA5A3A6EF}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequoia.Console", "Sequoia.Console\Sequoia.Console.fsproj", "{B390C6FE-6E8A-4ADA-B122-851B9ED8711A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{5769195F-D517-4832-96CB-3512A41EEC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5769195F-D517-4832-96CB-3512A41EEC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5769195F-D517-4832-96CB-3512A41EEC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F76EA1E-2BA9-4EDB-BE8A-EC0AA5A3A6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F76EA1E-2BA9-4EDB-BE8A-EC0AA5A3A6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F76EA1E-2BA9-4EDB-BE8A-EC0AA5A3A6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F76EA1E-2BA9-4EDB-BE8A-EC0AA5A3A6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B390C6FE-6E8A-4ADA-B122-851B9ED8711A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B390C6FE-6E8A-4ADA-B122-851B9ED8711A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B390C6FE-6E8A-4ADA-B122-851B9ED8711A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B390C6FE-6E8A-4ADA-B122-851B9ED8711A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
