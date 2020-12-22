@@ -1,5 +1,6 @@
 namespace Sequoia.Data
 
+open System
 open MongoDB.Bson
 open MongoDB.Bson.Serialization.Attributes
 
@@ -8,7 +9,13 @@ module Entities =
 
     [<CLIMutable>]
     type Client =
-        { [<BsonId>] Id: ObjectId
+        { [<BsonId>] ClientId: ObjectId
           Name: string
           ApiKey: string }
 
+    [<CLIMutable>]
+    type Log =
+        { [<BsonId>] Id: ObjectId
+          ClientId: ObjectId
+          Timestamp: DateTime
+          Message: string }

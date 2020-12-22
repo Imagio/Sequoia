@@ -1,7 +1,6 @@
 namespace Sequoia.Data
 
 open System
-open MongoDB.Bson
 open Sequoia
 open Sequoia.Common
 
@@ -10,16 +9,16 @@ module CommandRepository =
     
     type CreateClientAsync = Commands.CreateClientCommand -> IoResult<Client>
 
-    let createClientAsync (env: IStorage) : CreateClientAsync =
+    let createClientAsync (env: #IStorage) : CreateClientAsync =
         fun cmd ->
             let mongoCmd db =
                 db |> Mongo.get Collections.clientsCollection
                 |> Mongo.insertOne
             async {
-                let entity = { Id = ObjectId.GenerateNewId()
+                let db = env.GetDatabase()
+                let entity = { ClientId = db |> Mongo.newId
                                Name = cmd.Name
                                ApiKey = Guid.NewGuid() |> string }
-                let db = env.GetDatabase()
                 let! res = mongoCmd db entity
                 match res with
                 | Ok _ -> return Ok entity
